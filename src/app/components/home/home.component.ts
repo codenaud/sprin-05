@@ -1,5 +1,8 @@
+// home.component.ts
 import { Component } from '@angular/core';
 import { EscenaComponent } from '../escena/escena.component';
+import { IStep } from '../../interfaces/i-step';
+import { StepsService } from '../../services/steps.service';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +12,11 @@ import { EscenaComponent } from '../escena/escena.component';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  // 4.- Asegúrate de que homeData esté definida en la clase de HomeComponent:
-  homeData = {
-    /* tus datos aquí */
-  };
+  homeData: IStep[];
+  // homeData es el nombre que exportaré a home.component.hmtl
+  // la igualo a la interfaz IStep[] que a su vez es la interfaz que esta definida en los streps.sercices.ts
+
+  constructor(private stepsService: StepsService) {
+    this.homeData = this.stepsService.steps;
+  }
 }

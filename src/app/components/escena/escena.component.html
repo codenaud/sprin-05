@@ -1,4 +1,9 @@
-<h3>Dedica moltes hores</h3>
-
-Un mínim de 30 hores a la setmana. Si no en tens prou, hauràs de dedicar-li més hores. Al principi sembla impossible,
-però notaràs una millora ràpidament.
+<!-- escena.component.html -->
+@for (step of data; track step.id) {
+<div>
+  <h2>{{ step.title }}</h2>
+  <p>{{ step.description }}</p>
+  <img [src]="step.img" alt="Imagen">
+  <div [style.background-color]="step.bgcolor"></div>
+</div>
+}

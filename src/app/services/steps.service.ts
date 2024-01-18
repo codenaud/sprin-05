@@ -1,3 +1,4 @@
+// /services/steps.services.ts
 import { Injectable } from '@angular/core';
 import { IStep } from '../interfaces/i-step';
 
@@ -5,6 +6,8 @@ import { IStep } from '../interfaces/i-step';
   providedIn: 'root',
 })
 export class StepsService {
+  /* StepsService será el nombre de la variable a inyectar en home.component.ts
+  junto con la el numbre de la interfaz IStep[] */
   // Definimos el servicio steps con la variable de la interfaz [IStep]
 
   public steps: IStep[] = [
