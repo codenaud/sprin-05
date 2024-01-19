@@ -1,6 +1,6 @@
 # Sprint 05: Angular I: Onboarding digital
 
-[![IT Academy](src/assets/git-screenshot.png)]
+![IT Academy](src/assets/git-screenshot.png)
 
 ## Introduction
 
