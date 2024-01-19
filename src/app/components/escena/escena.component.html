@@ -1,9 +1,39 @@
 <!-- escena.component.html -->
-@for (step of data; track step.id) {
-<div>
-  <h2>{{ step.title }}</h2>
-  <p>{{ step.description }}</p>
-  <img [src]="step.img" alt="Imagen">
-  <div [style.background-color]="step.bgcolor"></div>
+<!-- El nombre de la variable 'data' que utilizamos viene de escena.component.ts -->
+<!-- Los estilos de este componente están en escena.component.css  -->
+
+<div *ngIf="data && data.length > 0">
+  @if (data[currentStep]) {
+  <div class="card">
+    <div class="card-main">
+      <div class="card-header" [style.background-color]="data[currentStep].bgcolor">
+        <img class="card-img-top" [src]="data[currentStep].img" alt="Card image">
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">{{ data[currentStep].title }}</h2>
+        <p class="card-text">{{ data[currentStep].description }}</p>
+      </div>
+      <div class="card-footer">
+        <!-- Indicadores de pasos -->
+        <div class="step-indicators">
+          @for (step of data; track step.id) {
+          <span [class.active]="$index === currentStep"></span>
+          }
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="card-footer-btns">
+          @if (currentStep > 0) {
+          <button class="btn-rounded light" (click)="previousStep()"><i class="fa-solid fa-arrow-left"></i></button>
+          }
+          @if (currentStep < data.length - 1) { <button class="btn-rounded dark" (click)="nextStep()"><i
+              class="fa-solid fa-arrow-right"></i></button>
+            }
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+
+
 </div>
-}

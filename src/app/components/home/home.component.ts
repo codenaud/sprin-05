@@ -14,9 +14,10 @@ import { StepsService } from '../../services/steps.service';
 export class HomeComponent {
   homeData: IStep[];
   // homeData es el nombre que exportaré a home.component.hmtl
-  // la igualo a la interfaz IStep[] que a su vez es la interfaz que esta definida en los streps.sercices.ts
+  // la igualo a la interfaz IStep[] que a su vez es la interfaz que esta definida en los steps.sercices.ts (interfaces/i-steps)
 
   constructor(private stepsService: StepsService) {
     this.homeData = this.stepsService.steps;
   }
+  // De aquí sale .steps => public steps: IStep[] = en steps.services.ts
 }

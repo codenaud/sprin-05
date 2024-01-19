@@ -1,0 +1,79 @@
+/* escena.component.css */
+/* Estilos para .card */
+.card {
+  display: flex;
+  width: 100%;
+  max-width: 260px;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/* Estilos para .card-main */
+.card-main {
+  width: 100%;
+}
+/* Estilos para .card-header */
+.card-header {
+  border-radius: 20px 20px 0px 0px;
+  padding: 1rem;
+  height: 300px;
+  display: flex;
+}
+
+.card-header img {
+  width: 100%;
+}
+/* Estilos para .card-body */
+.card-body {
+  padding: 1rem;
+}
+.card-title {
+  font-size: 14px;
+}
+.card-text {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.card-footer-btns {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-rounded {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: none;
+  border: none;
+}
+.dark {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+.light {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.step-indicators span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.step-indicators span.active {
+  width: 20px;
+  background-color: #000000;
+  border-radius: 20px;
+}

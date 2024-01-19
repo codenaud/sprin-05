@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* file: styles.css */
+
+/* Iconos font answesome => includen on angular.json */
+
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
