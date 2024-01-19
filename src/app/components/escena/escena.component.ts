@@ -20,18 +20,26 @@ export class EscenaComponent {
 
   // variable para la animación
   currentStep: number = 0;
-
-  constructor() {}
+  hideCard: boolean = false;
 
   nextStep(): void {
     if (this.currentStep < this.data.length - 1) {
+      this.animateStepChange();
       this.currentStep++;
     }
   }
 
   previousStep(): void {
     if (this.currentStep > 0) {
+      this.animateStepChange();
       this.currentStep--;
     }
+  }
+
+  animateStepChange(): void {
+    this.hideCard = true;
+    setTimeout(() => {
+      this.hideCard = false;
+    }, 250); // La mitad de la duración de la animación
   }
 }

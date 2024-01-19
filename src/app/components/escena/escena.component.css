@@ -6,6 +6,14 @@
   max-width: 260px;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card-hidden {
+  opacity: 1;
+  transform: translateX(-20px);
 }
 /* Estilos para .card-main */
 .card-main {
@@ -27,7 +35,7 @@
   padding: 1rem;
 }
 .card-title {
-  font-size: 14px;
+  font-size: 16px;
 }
 .card-text {
   font-size: 12px;
@@ -70,6 +78,7 @@
   background-color: #ebebeb;
   border-radius: 50%;
   margin: 0 4px;
+  transition: all 0.3s ease;
 }
 
 .step-indicators span.active {

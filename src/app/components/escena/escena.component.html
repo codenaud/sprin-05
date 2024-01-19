@@ -4,7 +4,7 @@
 
 <div *ngIf="data && data.length > 0">
   @if (data[currentStep]) {
-  <div class="card">
+  <div class="card" [ngClass]="{'card-hidden': hideCard}">
     <div class="card-main">
       <div class="card-header" [style.background-color]="data[currentStep].bgcolor">
         <img class="card-img-top" [src]="data[currentStep].img" alt="Card image">
