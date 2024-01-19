@@ -1,6 +1,6 @@
 # Sprint 05: Angular I: Onboarding digital
 
-[![IT Academy](src/assets/git-screenshot.png)](https://codenaud.github.io/sprint-05/)
+[![IT Academy](src/assets/git-screenshot.png)]
 
 ## Introduction
 
